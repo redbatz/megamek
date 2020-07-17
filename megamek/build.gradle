@@ -43,7 +43,7 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:2.20.1'
 }
 
-mainClassName = 'megamek.MegaMek'
+mainClassName = 'org.redbat.roguetech.megamek.MegaMek'
 
 ext {
     jvmOptions = ['-Xmx1024m']
@@ -234,7 +234,7 @@ task createOSXBundle (dependsOn: jar) {
 distributions {
     // Creates tasks which package distribution with MM jar and startup script in root directory
     unix {
-        baseName = 'megamek'
+        baseName = 'rt_megamek'
         contents {
             from fileStagingDir
             from(createStartScripts.outputs.files) {
