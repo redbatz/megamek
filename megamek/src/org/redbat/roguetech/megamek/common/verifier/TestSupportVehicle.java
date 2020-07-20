@@ -1035,7 +1035,7 @@ public class TestSupportVehicle extends TestEntity {
                     && !m.getType().hasFlag(WeaponType.F_TANK_WEAPON)) {
                 buff.append(m.getType().getName()).append(" cannot be used by support vehicles.\n");
                 correct = false;
-            } else if (!TestTank.legalForMotiveType(m.getType(), supportVee.getMovementMode(), true)) {
+            } else if (!TestTank.legalForMotiveType(m.getType(), supportVee.getMovementMode())) {
                 buff.append(m.getType().getName()).append(" is incompatible with ")
                         .append(supportVee.getMovementModeAsString());
                 correct = false;
